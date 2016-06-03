@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>whatstoday</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">        
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>   
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-cookies.js"></script>
+        <script src="https://angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>        
+    </head>
+    
+    <body ng-app="mainApp" data-target=".navbar">
+        <ui-view></ui-view>
+        <script src="/controllers/ctrl.index.js"></script>
+        <script src="/services/user.service.js"></script>
+        <script src="/services/auth.service.js"></script>
+        <script src="/controllers/ctrl.barList.js"></script>
+        <script src="/controllers/ctrl.login.js"></script>
+        <script src="/controllers/ctrl.signup.js"></script>
+    </body>
+</html>

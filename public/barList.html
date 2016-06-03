@@ -1,0 +1,28 @@
+ <my-navbar></my-navbar>
+<div class="container">
+   
+    <h1>Plans Lunch?</h1>
+    <p>See which restaurants are hoppin' and RSVP ahead of time!</p>
+    <p>Have fun!</p>
+    <div class="restaurantQuery">
+        <form>
+            <div class="form-group">
+                <input class="form-control" type='text' placeholder="WHERE YOU AT?" ng-model="qLocation"></input>
+            </div>
+            <div class="form-group">
+                <button class="form-control btn btn-primary" ng-click="getBars()">Go</button>
+            </div>
+        </form>
+        <div ng-show="isLoading">Loading...</div>
+        <div ng-show="showErr">{{errInfo}}</div>
+        <div class="listGroup">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="bar in bars">
+                    <img src={{bar.img}}>
+                    <a href={{bar.url}} target=_blank>{{bar.name}}</a>
+                    <button class="btn btn-default" ng-click="attending($index)">{{bar.attending.length}} Going</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
